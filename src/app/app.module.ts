@@ -10,6 +10,9 @@ import { ProductComponent } from './components/product/product.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSelectModule } from '@angular/material/select';
+
+import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,8 @@ import { MatIconModule } from '@angular/material/icon';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
+    NgxMatSelectSearchModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
