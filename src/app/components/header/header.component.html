@@ -1,22 +1,28 @@
-<header class="bg-neutral-white-100 h-20 md:flex items-center w-full gap-2">
-  <div class="flex bg-white py-3 px-1 w-full rounded-md">
+<header
+  class="bg-neutral-white-100 h-20 lg:flex items-center justify-center w-full gap-2 px-3"
+>
+  <div
+    class="flex bg-white py-3 px-1 w-full xl:max-w-3xl rounded-md border border-accent-orange"
+  >
     <input
       type="text"
       name=""
       id="search"
       placeholder="I'm looking for..."
-      class="outline-none w-2/3 md:w-full block border-r-2 border-neutral-white-300 px-1"
+      class="outline-none w-2/3 lg:w-full block border-r-2 border-neutral-white-300 px-1"
     />
 
     <select
-      class="border-none outline-none w-1/3 md:max-w-[200px] px-2 select-none"
+      class="border-none outline-none w-1/3 lg:max-w-[200px] px-2 select-none"
     >
       <option value="All">All Departments</option>
       <option value="All">All Departments</option>
       <option value="All">All Departments</option>
     </select>
   </div>
-  <div class="hidden md:block w-[200px]">
+  <div
+    class="hidden lg:block w-[200px] rounded-md border border-accent-orange overflow-hidden"
+  >
     <mat-select
       #singleSelect
       class="bg-white py-3 w-[200px] px-1"
@@ -46,7 +52,7 @@
       </mat-option>
     </mat-select>
   </div>
-  <div class="hidden md:flex gap-2 w-1/2 md:w-[100px] lg:w-[200px] justify-end">
+  <div class="hidden lg:flex gap-2 w-1/2 lg:w-[100px] lg:w-[200px] justify-end">
     <mat-icon>shopping_cart</mat-icon>
     <mat-icon>person_pin</mat-icon>
   </div>

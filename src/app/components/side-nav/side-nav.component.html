@@ -1,7 +1,7 @@
-<div class="bg-neutral-white-100 w-full shadows">
+<div class="bg-neutral-white-100 w-full shadows z-30 relative">
   <div
     id="side-mob-wrapper"
-    class="flex flex-col items-center justify-center px-5 lg:pl-0 z-10"
+    class="flex flex-col items-center justify-center px-5 lg:px-0 z-10"
   >
     <div class="flex justify-between items-center w-full">
       <div class="flex w-full max-w-[200px]" id="menu-logo">
@@ -17,13 +17,13 @@
           <img src="assets/logo.png" alt="" class="w-full h-full" />
         </div>
       </div>
-      <app-header class="hidden md:block md:w-full ml-4"></app-header>
-      <div class="flex gap-2 w-1/2 justify-end md:hidden">
+      <!-- <app-header class="hidden lg:block lg:w-full ml-4"></app-header> -->
+      <div class="flex gap-2 w-1/2 justify-end lg:hidden">
         <mat-icon>shopping_cart</mat-icon>
         <mat-icon>person_pin</mat-icon>
       </div>
     </div>
-    <div id="mobile-search" class="w-full md:hidden">
+    <div id="mobile-search" class="w-full lg:hidden">
       <app-header></app-header>
     </div>
   </div>
@@ -31,5 +31,5 @@
 
 <app-categories
   class="transition-all duration-300 absolute"
-  [ngClass]="{ 'translate-x-0': show, ' -translate-x-10 opacity-0': !show }"
+  [ngClass]="{ 'translate-x-0': show, ' -translate-x-44 opacity-0': !show }"
 ></app-categories>

@@ -1,7 +1,9 @@
-<div class="font-Montserrat flex relative">
-  <app-side-nav class="w-screen"></app-side-nav>
-  <main class="">
-    <!-- <app-header></app-header> -->
-    <router-outlet></router-outlet>
+<div class="font-Montserrat lg:flex relative">
+  <app-side-nav class="w-screen lg:w-[200px]"></app-side-nav>
+  <main class="w-full">
+    <app-header class="hidden lg:block lg:w-full"></app-header>
+    <div class="px-2">
+      <router-outlet></router-outlet>
+    </div>
   </main>
 </div>
