@@ -13,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 
 import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
     MainComponent,
     ProductComponent,
     CategoriesComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
