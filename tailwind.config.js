@@ -18,6 +18,9 @@ module.exports = {
       boxShadow: {
         sidebar: "5px 0px 5px rgb(206, 204, 204)",
       },
+      screens: {
+        xs: "375px",
+      },
     },
   },
   plugins: [],

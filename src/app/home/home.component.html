@@ -1,1 +1,53 @@
-<p>home works!</p>
+<main class="container flex justify-center pt-5">
+  <div
+    class="w-full lg:w-[calc(100vw-220px)] max-w-6xl aspect-video border border-red-700 rounded-lg overflow-hidden"
+  >
+    <swiper
+      [slidesPerView]="1"
+      [spaceBetween]="50"
+      [navigation]="true"
+      [pagination]="{
+        type: 'fraction'
+      }"
+      [centeredSlides]="true"
+      [keyboard]="{
+        enabled: true
+      }"
+      class="my-swiper h-full w-full"
+    >
+      <ng-template
+        swiperSlide
+        *ngFor="let slide of slides$ | async; index as i"
+        class="h-full w-full"
+      >
+        <div class="swiper-slide-container w-full h-full aspect-video relative">
+          <img
+            src="assets/tbr23.png"
+            class="w-full h-full object-cover absolute inset-0 -z-10"
+          />
+          <div
+            class="text-neutral-black relative top-[10%] xs:top-[15%] md:!top-[25%] w-1/2 ml-[10%] text-base md:text-xl space-y-1 md:space-y-6"
+          >
+            <span class="text-neutral-400">Shop</span>
+            <h2 class="font-extrabold md:text-4xl lg:text-5xl xl:text-6xl">
+              Toys & Games
+            </h2>
+            <p class="text-sm md:text-base lg:text-lg">
+              Over 60 000 action figure
+              <span class="hidden xs:inline"> , arts, and crafts,dolls, </span>
+              <br />
+              <span class="hidden md:inline">
+                puzzles,learning toys and more.
+              </span>
+            </p>
+            <button
+              class="bg-accent-orange px-4 py-2 text-neutral-white rounded-md"
+            >
+              Shop now
+            </button>
+          </div>
+        </div>
+      </ng-template>
+    </swiper>
+  </div>
+</main>

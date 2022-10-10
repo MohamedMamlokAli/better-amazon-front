@@ -11,6 +11,7 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
+import { SwiperModule } from 'swiper/angular';
 
 import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 import { HomeComponent } from './home/home.component';
@@ -32,6 +33,7 @@ import { HomeComponent } from './home/home.component';
     MatIconModule,
     NgxMatSelectSearchModule,
     MatSelectModule,
+    SwiperModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
