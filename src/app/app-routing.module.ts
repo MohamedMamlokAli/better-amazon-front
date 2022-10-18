@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { MainComponent } from './components/main/main.component';
 import { ProductComponent } from './components/product/product.component';
-import { HomeComponent } from './home/home.component';
+import { ProductsComponent } from './products-page/Products/products.component';
+import { HomeComponent } from './landing-page/home/home.component';
 
 const routes: Routes = [
   {
@@ -18,6 +17,10 @@ const routes: Routes = [
   {
     path: 'product',
     component: ProductComponent,
+  },
+  {
+    path: 'products/:category',
+    component: ProductsComponent,
   },
 ];
 
