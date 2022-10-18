@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { SwiperService } from 'src/app/services/swiper.service';
 import SwiperCore, { Keyboard, Pagination, Navigation, Virtual } from 'swiper';
 
 SwiperCore.use([Keyboard, Pagination, Navigation, Virtual]);
@@ -12,8 +13,12 @@ SwiperCore.use([Keyboard, Pagination, Navigation, Virtual]);
 })
 export class HomeComponent implements OnInit {
   slides$ = new BehaviorSubject<string[]>(['']);
-
-  constructor() {}
+  homeCategories;
+  accesories;
+  constructor(private categoriesSliders: SwiperService) {
+    this.homeCategories = this.categoriesSliders.getHomeCategories;
+    this.accesories = this.categoriesSliders.accesories;
+  }
 
   ngOnInit(): void {
     this.slides$.next(

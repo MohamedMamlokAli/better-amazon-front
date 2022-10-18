@@ -1,0 +1,42 @@
+<div class="w-full" id="product-card">
+  <div class="relative h-auto">
+    <span
+      class="text-neutral-black absolute bottom-0 text-sm bg-accent-orange block py-0.5 px-1"
+      >Best seller</span
+    >
+    <div class="w-1/2 mx-auto">
+      <img
+        [src]="product.productImage"
+        class="w-full h-full object-cover"
+        alt=""
+      />
+    </div>
+  </div>
+  <div class="flex flex-col items-start pl-3 pr-1 space-y-2">
+    <h2>{{ product.productName }}</h2>
+    <div>
+      <h6 class="font-bold text-lg text-neutral-black">
+        {{ product.productPrice | currency }}
+      </h6>
+      <h6 class="text-neutral-black text-sm">{{ 2.68 | currency }} Shipping</h6>
+    </div>
+    <p class="text-neutral-black text-sm">
+      {{ product.productDescription | slice: 0:30 }}...
+    </p>
+    <div>
+      <!-- <app-star-rating [rating]="product.productRating.stars"></app-star-rating> -->
+
+      <h6 class="text-[#a1a1a1] text-sm">
+        {{ product.productRating.count | number: "1.00" }} Reviews >
+      </h6>
+    </div>
+    <span class="text-sm text-neutral-black">Get it soon</span>
+  </div>
+  <div id="hidden-options" class="hidden group-hover:block">
+    <button
+      class="text-accent-orange text-sm border border-accent-orange bg-neutral-white px-4 py-1 hover:bg-accent-orange hover:text-neutral-white rounded-md transition-all"
+    >
+      Add to Cart
+    </button>
+  </div>
+</div>

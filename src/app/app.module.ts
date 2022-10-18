@@ -11,11 +11,12 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
-import { SwiperModule } from 'swiper/angular';
-
 import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
-import { HomeComponent } from './home/home.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { LandingPageModule } from './landing-page/landing-page.module';
+import { FooterComponent } from './footer/footer.component';
+import { ProductsPageModule } from './products-page/products-page.module';
+import { StarRatingComponent } from './star-rating/star-rating.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import { HomeComponent } from './home/home.component';
     MainComponent,
     ProductComponent,
     CategoriesComponent,
-    HomeComponent,
+    FooterComponent,
+    // StarRatingComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,9 @@ import { HomeComponent } from './home/home.component';
     MatIconModule,
     NgxMatSelectSearchModule,
     MatSelectModule,
-    SwiperModule,
+    HttpClientModule,
+    LandingPageModule,
+    ProductsPageModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

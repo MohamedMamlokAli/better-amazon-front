@@ -1,0 +1,70 @@
+<section class="relative my-10" (window:resize)="onResize($event)">
+  <h2 class="text-center font-bold text-lg">{{ section_title }}</h2>
+  <div
+    class="absolute h-full w-10 bg-neutral-white-100 opacity-20 right-0 top-0 z-20"
+  ></div>
+  <swiper
+    [slidesPerView]="slidesPerView"
+    [spaceBetween]="40"
+    [scrollbar]="{
+      hide: false
+    }"
+    class="my-swiper h-auto w-full cursor-grab"
+    (slideChangeTransitionEnd)="onSwipe($event)"
+  >
+    <ng-template
+      swiperSlide
+      *ngFor="let slide of slides$ | async; index as i"
+      class="h-full w-full flex flex-col items-center justify-center cursor-pointer hover:shadow shadow-neutral-white-300 group pb-10"
+    >
+      <div class="group-hover:scale-110 transition-all">
+        <div class="relative h-auto">
+          <span
+            class="text-neutral-black absolute bottom-0 text-sm bg-accent-orange block py-0.5 px-1"
+            >Best seller</span
+          >
+          <div class="w-1/2 mx-auto">
+            <img
+              src="https://m.media-amazon.com/images/I/61+WYAjltpL._AC_SL1500_.jpg"
+              class="w-full h-full object-cover"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="flex flex-col items-start pl-3 pr-1 space-y-2">
+          <div>
+            <h6 class="font-bold text-lg text-neutral-black">
+              {{ 30 | currency }}
+            </h6>
+            <h6 class="text-neutral-black text-sm">
+              {{ 2.68 | currency }} Shipping
+            </h6>
+          </div>
+          <p class="text-neutral-black text-sm">
+            {{
+              "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga laudantium est velit eos reprehenderit deleniti"
+                | slice: 0:30
+            }}...
+          </p>
+          <div>
+            <!-- <app-star-rating [rating]="5"></app-star-rating> -->
+            <h6 class="text-[#a1a1a1] text-sm">
+              {{ 19800 | number: "1.00" }} Reviews >
+            </h6>
+          </div>
+          <span class="text-sm text-neutral-black">Get it soon</span>
+        </div>
+        <div id="hidden-options" class="hidden group-hover:block">
+          <button
+            class="text-accent-orange text-sm border border-accent-orange bg-neutral-white px-4 py-1 hover:bg-accent-orange hover:text-neutral-white rounded-md transition-all"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </ng-template>
+  </swiper>
+  <div
+    class="absolute h-full w-10 bg-neutral-white-100 opacity-40 left-0 top-0"
+  ></div>
+</section>

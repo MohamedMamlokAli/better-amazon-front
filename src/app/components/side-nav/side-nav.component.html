@@ -30,6 +30,9 @@
 </div>
 
 <app-categories
-  class="transition-all duration-300 absolute z-30"
-  [ngClass]="{ 'translate-x-0': show, ' -translate-x-44 opacity-0': !show }"
+  class="transition-all duration-300 absolute z-30 shadow-sidebar h-[calc(100%-200px)]"
+  [ngClass]="{
+    'translate-x-0': show,
+    ' -translate-x-44 opacity-0': !show
+  }"
 ></app-categories>

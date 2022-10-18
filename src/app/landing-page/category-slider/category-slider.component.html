@@ -1,0 +1,38 @@
+<section class="relative my-10" (window:resize)="onResize($event)">
+  <h2 class="text-center font-bold text-lg py-3">{{ section_title }}</h2>
+
+  <swiper
+    [slidesPerView]="slidesPerView"
+    [spaceBetween]="40"
+    [scrollbar]="{
+      hide: false
+    }"
+    class="my-swiper w-full cursor-grab h-[400px]"
+    (slideChangeTransitionEnd)="onSwipe($event)"
+  >
+    <ng-template
+      swiperSlide
+      *ngFor="let slide of categories; index as i"
+      class="w-full flex flex-col justify-between items-center cursor-pointer h-full py-10"
+    >
+      <div class="w-full h-2/3">
+        <div class="w-full h-full mx-auto">
+          <img
+            [src]="slide.categoryImage"
+            class="w-full h-full object-contain"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="flex flex-col items-center pl-3 pr-1 space-y-2 text-lg">
+        <h3 class="font-bold">{{ slide.categoryName }}</h3>
+        <button
+          class="text-accent-orange border border-accent-orange bg-neutral-white px-4 py-2 hover:bg-accent-orange hover:text-neutral-white rounded-md transition-all"
+          *ngIf="withButtons"
+        >
+          Shop now
+        </button>
+      </div>
+    </ng-template>
+  </swiper>
+</section>

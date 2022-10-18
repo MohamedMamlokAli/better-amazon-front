@@ -6,3 +6,8 @@ export interface Category {
 export interface Options {
   option: string;
 }
+
+export interface HomeCategories {
+  categoryName: string;
+  categoryImage: string;
+}

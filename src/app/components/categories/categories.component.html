@@ -1,11 +1,9 @@
 <div
   class="relative flex text-neutral-500 font-semibold shadows min-w-[200px] min-h-screen top-0.5"
 >
-  <!-- <div
-    id="dim-background"
-    class="w-screen h-auto bg-black/50 -z-40 absolute inset-0 right-0 lg:hidden"
-  ></div> -->
-  <ul class="bg-white space-y-7 py-3 px-3 shadow-neutral-white-300 w-full">
+  <ul
+    class="bg-white space-y-7 py-3 px-3 shadow-neutral-white-300 w-full h-full"
+  >
     <li
       *ngFor="let category of categories"
       (click)="hovered(category.id)"
@@ -27,17 +25,4 @@
       {{ category.categoryName }} <span>></span>
     </li>
   </ul>
-  <!-- <ul
-    class="bg-white transition-all duration-300 space-y-7 py-3 px-2"
-    *ngIf="categoryPicked"
-    [ngClass]="{
-      'translate-x-0': categoryPicked,
-      ' -translate-x-10 opacity-0': !categoryPicked
-    }"
-  >
-    <button (click)="unHovered()">close</button>
-    <li *ngFor="let options of categories[category - 1].categoryOptions">
-      {{ options.option }}
-    </li>
-  </ul> -->
 </div>
