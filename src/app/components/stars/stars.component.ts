@@ -1,19 +1,16 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-star-rating',
-  templateUrl: './star-rating.component.html',
-  styleUrls: ['./star-rating.component.css'],
+  selector: 'app-stars',
+  templateUrl: './stars.component.html',
+  styleUrls: ['./stars.component.css'],
 })
-export class StarRatingComponent implements OnInit {
+export class StarsComponent implements OnInit {
   @Input() rating!: number;
   yellow: number[] = [];
   gray: number[] = [];
-  constructor() {}
 
-  ngOnInit(): void {
-    console.log(this.rating);
-
+  constructor() {
     for (let i = 0; i < Math.floor(this.rating); i++) {
       this.yellow.push(i);
     }
@@ -21,4 +18,6 @@ export class StarRatingComponent implements OnInit {
       this.gray.push(i);
     }
   }
+
+  ngOnInit(): void {}
 }
