@@ -5,7 +5,7 @@ import { HeroComponent } from './hero/hero.component';
 import { SwiperModule } from 'swiper/angular';
 import { SectionComponent } from './section/section.component';
 import { CategorySliderComponent } from './category-slider/category-slider.component';
-import { SharedModule } from '../shared/shared/shared.module';
+import { SharedModule } from '../../shared/shared/shared.module';
 
 @NgModule({
   declarations: [

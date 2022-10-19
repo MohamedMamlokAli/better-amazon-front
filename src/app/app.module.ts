@@ -13,9 +13,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 import { HttpClientModule } from '@angular/common/http';
-import { LandingPageModule } from './landing-page/landing-page.module';
-import { FooterComponent } from './footer/footer.component';
-import { ProductsPageModule } from './products-page/products-page.module';
+import { LandingPageModule } from './pages/landing-page/landing-page.module';
+import { FooterComponent } from './components/footer/footer.component';
+import { ProductsPageModule } from './pages/products-page/products-page.module';
 @NgModule({
   declarations: [
     AppComponent,

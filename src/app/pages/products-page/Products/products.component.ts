@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Product, Response } from 'src/app/models/product.model';
-import { ProductsService } from 'src/app/services/products.service';
+import { Product } from 'src/app/models/product.model';
 import { ActivatedRoute, Params } from '@angular/router';
+import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
   selector: 'app-products',
