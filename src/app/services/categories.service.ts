@@ -27,7 +27,7 @@ export class CategoriesService {
       },
       {
         id: 2,
-        categoryName: 'Computers',
+        categoryName: 'Headphones',
         categoryOptions: [
           {
             option: 'Graphics Cards',

@@ -10,7 +10,9 @@ export class StarsComponent implements OnInit {
   yellow: number[] = [];
   gray: number[] = [];
 
-  constructor() {
+  constructor() {}
+
+  ngOnInit(): void {
     for (let i = 0; i < Math.floor(this.rating); i++) {
       this.yellow.push(i);
     }
@@ -18,6 +20,4 @@ export class StarsComponent implements OnInit {
       this.gray.push(i);
     }
   }
-
-  ngOnInit(): void {}
 }

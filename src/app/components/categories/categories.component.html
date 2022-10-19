@@ -4,13 +4,18 @@
   <ul
     class="bg-white space-y-7 py-3 px-3 shadow-neutral-white-300 w-full h-full"
   >
-    <li
+    <a
       *ngFor="let category of categories"
-      (click)="hovered(category.id)"
-      class="flex justify-between px-2 cursor-pointer"
+      routerLink="products/{{ category.categoryName }}"
+      routerLinkActive="text-orange-600"
     >
-      {{ category.categoryName }} <span>></span>
-    </li>
+      <li
+        (click)="hovered(category.id)"
+        class="flex justify-between px-2 cursor-pointer"
+      >
+        {{ category.categoryName }} <span>></span>
+      </li>
+    </a>
     <li
       *ngFor="let category of categories"
       (click)="hovered(category.id)"

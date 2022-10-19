@@ -13,4 +13,9 @@ export class ProductsService {
       params: filter,
     });
   };
+  getProduct(id: string): Observable<{ product: Product }> {
+    return this.http.get<{ product: Product }>(
+      `http://localhost:5000/api/v1/products/${id}`
+    );
+  }
 }

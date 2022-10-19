@@ -21,11 +21,14 @@ export class ProductsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.ProductsService.getProducts({
-      productCategory: this.param['category'],
-    }).subscribe((result) => {
-      this.products = result.data.products;
-      console.log(this.products);
+    this.ActiveRoute.params.subscribe((data) => {
+      this.param = data;
+      this.ProductsService.getProducts({
+        productCategory: this.param['category'],
+      }).subscribe((result) => {
+        this.products = result.data.products;
+        console.log(this.products);
+      });
     });
   }
 }

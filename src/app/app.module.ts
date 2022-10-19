@@ -16,7 +16,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { LandingPageModule } from './landing-page/landing-page.module';
 import { FooterComponent } from './footer/footer.component';
 import { ProductsPageModule } from './products-page/products-page.module';
-import { StarsComponent } from './components/stars/stars.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +25,6 @@ import { StarsComponent } from './components/stars/stars.component';
     ProductComponent,
     CategoriesComponent,
     FooterComponent,
-    StarsComponent,
   ],
   imports: [
     BrowserModule,
