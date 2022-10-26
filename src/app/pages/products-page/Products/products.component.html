@@ -1,4 +1,12 @@
 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 my-10 gap-5">
+  <div
+    *ngIf="!products"
+    class="h-[calc(100vh+200px)] flex justify-center items-start w-screen"
+  >
+    <div
+      class="w-52 h-52 rounded-full animate-spin border-r border-r-accent-orange"
+    ></div>
+  </div>
   <app-card
     *ngFor="let item of products; index as i"
     [product]="item"
