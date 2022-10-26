@@ -1,21 +1,26 @@
-<main class="container mx-auto pt-5 relative">
-  <app-hero class="w-full mx-auto"></app-hero>
+<main class="flex">
+  <div class="min-h-full">
+    <app-categories class="hidden lg:block h-full"></app-categories>
+  </div>
+  <div class="w-full">
+    <app-hero class="w-full mx-auto"></app-hero>
+    <app-section [section_title]="'Recommended Section'"></app-section>
+    <app-category-slider
+      section_title="Shop by category"
+      [categories]="homeCategories"
+    ></app-category-slider>
+    <app-category-slider
+      section_title="Gaming Accessories"
+      [categories]="accesories"
+      [withButtons]="false"
+    ></app-category-slider>
+    <app-category-slider
+      section_title="Shop by category"
+      [categories]="homeCategories"
+    ></app-category-slider>
+    <app-category-slider
+      section_title="Shop by category"
+      [categories]="homeCategories"
+    ></app-category-slider>
+  </div>
 </main>
-<app-section [section_title]="'Recommended Section'"></app-section>
-<app-category-slider
-  section_title="Shop by category"
-  [categories]="homeCategories"
-></app-category-slider>
-<app-category-slider
-  section_title="Gaming Accessories"
-  [categories]="accesories"
-  [withButtons]="false"
-></app-category-slider>
-<app-category-slider
-  section_title="Shop by category"
-  [categories]="homeCategories"
-></app-category-slider>
-<app-category-slider
-  section_title="Shop by category"
-  [categories]="homeCategories"
-></app-category-slider>

@@ -2,13 +2,10 @@
 <div id="page-wrapper" class="flex relative">
   <app-categories
     [ngClass]="{ hidden: !menuOpened }"
-    class="absolute z-10 min-h-full lg:hidden"
+    class="absolute z-20 h-screen lg:hidden w-20"
   ></app-categories>
-  <div class="min-h-full">
-    <app-categories class="hidden lg:block h-full"></app-categories>
-  </div>
   <div class="w-full lg:w-[calc(100%-202px)]">
     <router-outlet></router-outlet>
-    <app-footer></app-footer>
   </div>
 </div>
+<app-footer></app-footer>
