@@ -1,10 +1,14 @@
-<div class="font-Montserrat lg:flex relative">
-  <app-side-nav class="w-screen lg:w-[200px]"></app-side-nav>
-  <main class="w-full border">
-    <app-header class="hidden lg:block lg:w-full"></app-header>
-    <div class="px-2">
-      <router-outlet></router-outlet>
-    </div>
+<app-header (toggle)="toggleMenu()"></app-header>
+<div id="page-wrapper" class="flex relative">
+  <app-categories
+    [ngClass]="{ hidden: !menuOpened }"
+    class="absolute z-10 min-h-full lg:hidden"
+  ></app-categories>
+  <div class="min-h-full border border-red-500">
+    <app-categories class="hidden lg:block h-full"></app-categories>
+  </div>
+  <div class="border border-blue-500 w-full lg:w-[calc(100%-202px)]">
+    <router-outlet></router-outlet>
     <app-footer></app-footer>
-  </main>
+  </div>
 </div>

@@ -1,23 +1,23 @@
 <section class="relative my-10" (window:resize)="onResize($event)">
   <h2 class="text-center font-bold text-lg">{{ section_title }}</h2>
-  <div
+  <!-- <div
     class="absolute h-full w-10 bg-neutral-white-100 opacity-20 right-0 top-0 z-20"
-  ></div>
+  ></div> -->
   <swiper
     [slidesPerView]="slidesPerView"
     [spaceBetween]="40"
     [scrollbar]="{
       hide: false
     }"
-    class="my-swiper h-auto w-full cursor-grab"
+    class="my-swiper h-auto w-full border border-yellow-600 cursor-grab"
     (slideChangeTransitionEnd)="onSwipe($event)"
   >
     <ng-template
       swiperSlide
       *ngFor="let slide of slides$ | async; index as i"
-      class="h-full w-full flex flex-col items-center justify-center cursor-pointer hover:shadow shadow-neutral-white-300 group pb-10"
+      class="h-full w-64 flex flex-col items-center justify-center cursor-pointer hover:shadow shadow-neutral-white-300 group pb-10"
     >
-      <div class="group-hover:scale-110 transition-all">
+      <div class="transition-all">
         <div class="relative h-auto">
           <span
             class="text-neutral-black absolute bottom-0 text-sm bg-accent-orange block py-0.5 px-1"
@@ -47,7 +47,7 @@
             }}...
           </p>
           <div>
-            <!-- <app-star-rating [rating]="5"></app-star-rating> -->
+            <app-stars [rating]="4"></app-stars>
 
             <h6 class="text-[#a1a1a1] text-sm">
               {{ 19800 | number: "1.00" }} Reviews >
@@ -65,7 +65,7 @@
       </div>
     </ng-template>
   </swiper>
-  <div
+  <!-- <div
     class="absolute h-full w-10 bg-neutral-white-100 opacity-40 left-0 top-0"
-  ></div>
+  ></div> -->
 </section>

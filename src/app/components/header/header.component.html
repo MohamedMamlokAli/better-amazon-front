@@ -1,58 +1,89 @@
 <header
-  class="bg-neutral-white-100 h-20 lg:flex items-center justify-center w-full gap-2 px-3"
+  class="bg-neutral-white-100 h-auto py-2 lg:h-20 lg:flex items-center justify-between w-full gap-2 px-3 border border-red-500"
 >
+  <!-- image -->
   <div
-    class="flex bg-white py-3 px-1 w-full xl:max-w-3xl rounded-md border border-accent-orange"
+    id="amazon-image"
+    class="w-full lg:w-44 flex items-center justify-between"
   >
-    <input
-      type="text"
-      name=""
-      id="search"
-      placeholder="I'm looking for..."
-      class="outline-none w-2/3 lg:w-full block border-r-2 border-neutral-white-300 px-1"
-    />
-
-    <select
-      class="border-none outline-none w-1/3 lg:max-w-[200px] px-2 select-none"
-    >
-      <option value="All">All Departments</option>
-      <option value="All">All Departments</option>
-      <option value="All">All Departments</option>
-    </select>
-  </div>
-  <div
-    class="hidden lg:block w-[200px] rounded-md border border-accent-orange overflow-hidden"
-  >
-    <mat-select
-      #singleSelect
-      class="bg-white py-3 w-[200px] px-1"
-      value="Egypt"
-    >
-      <mat-option
-        style="
-          background-image: url('../../../assets/usa.png');
-          background-repeat: no-repeat;
-          background-size: 25px 25px;
-          background-position: left;
-        "
-        value="usa"
+    <div class="w-44 lg:w-full flex items-center">
+      <button
+        mat-icon-button
+        class="lg:hidden"
+        aria-label="Example icon-button with menu icon"
+        (click)="toggleMenu()"
       >
-        <span class="ml-4">United States</span>
-      </mat-option>
-      <mat-option
-        style="
-          background-image: url('../../../assets/egypt.png');
-          background-repeat: no-repeat;
-          background-size: 25px 25px;
-          background-position: left;
-        "
+        <mat-icon>menu</mat-icon>
+      </button>
+      <img
+        src="assets/logo.png"
+        alt="Better Amazon logo"
+        class="w-full h-full"
+      />
+    </div>
+    <div class="flex lg:hidden gap-2 w-1/2 lg:w-[200px] justify-end">
+      <mat-icon>shopping_cart</mat-icon>
+      <mat-icon>person_pin</mat-icon>
+    </div>
+  </div>
+  <!-- search/countries -->
+  <div class="flex gap-1 w-full lg:max-w-3xl">
+    <!-- search -->
+    <div
+      class="flex flex-1 bg-white py-3 px-1 w-full rounded-md border border-accent-orange"
+    >
+      <input
+        type="text"
+        name=""
+        id="search"
+        placeholder="I'm looking for..."
+        class="outline-none w-2/3 lg:w-full block border-r-2 border-neutral-white-300 px-1"
+      />
+
+      <select
+        class="border-none outline-none w-1/3 lg:max-w-[200px] px-2 select-none"
+      >
+        <option value="All">All Departments</option>
+        <option value="All">All Departments</option>
+        <option value="All">All Departments</option>
+      </select>
+    </div>
+    <!-- countries -->
+    <div
+      class="hidden lg:block w-[200px] rounded-md border border-accent-orange overflow-hidden"
+    >
+      <mat-select
+        #singleSelect
+        class="bg-white py-3 w-[200px] px-1"
         value="Egypt"
       >
-        <span class="ml-4">Egypt</span>
-      </mat-option>
-    </mat-select>
+        <mat-option
+          style="
+            background-image: url('../../../assets/usa.png');
+            background-repeat: no-repeat;
+            background-size: 25px 25px;
+            background-position: left;
+          "
+          value="usa"
+        >
+          <span class="ml-4">United States</span>
+        </mat-option>
+        <mat-option
+          style="
+            background-image: url('../../../assets/egypt.png');
+            background-repeat: no-repeat;
+            background-size: 25px 25px;
+            background-position: left;
+          "
+          value="Egypt"
+        >
+          <span class="ml-4">Egypt</span>
+        </mat-option>
+      </mat-select>
+    </div>
   </div>
-  <div class="hidden lg:flex gap-2 w-1/2 lg:w-[100px] lg:w-[200px] justify-end">
+  <!-- profile/cart -->
+  <div class="hidden lg:flex gap-2 w-1/2 lg:w-[200px] justify-end">
     <mat-icon>shopping_cart</mat-icon>
     <mat-icon>person_pin</mat-icon>
   </div>
