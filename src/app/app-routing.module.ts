@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProductsComponent } from './pages/products-page/Products/products.component';
 import { HomeComponent } from './pages/landing-page/home/home.component';
 import { ProductComponent } from './pages/ProductPage/product/product.component';
+import { SidemenuComponent } from './components/sidemenu/sidemenu.component';
+import { CategoriesComponent } from './components/categories/categories.component';
 
 const routes: Routes = [
   {
@@ -13,6 +15,12 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    children: [],
+  },
+  {
+    path: 'menu',
+    outlet: 'sidemenu',
+    component: CategoriesComponent,
   },
 
   {

@@ -25,11 +25,9 @@ export class SectionComponent implements OnInit {
   constructor() {
     if (window.innerWidth >= 768) {
       this.slidesPerView = 3.5;
-      console.log(window.innerWidth);
     }
     if (window.innerWidth >= 1024) {
       this.slidesPerView = 4.5;
-      console.log(window.innerWidth);
     }
   }
 

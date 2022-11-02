@@ -16,6 +16,7 @@ import { LandingPageModule } from './pages/landing-page/landing-page.module';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductsPageModule } from './pages/products-page/products-page.module';
 import { SharedModule } from './shared/shared/shared.module';
+import { SidemenuComponent } from './components/sidemenu/sidemenu.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +25,7 @@ import { SharedModule } from './shared/shared/shared.module';
     MainComponent,
     ProductComponent,
     FooterComponent,
+    SidemenuComponent,
   ],
   imports: [
     BrowserModule,

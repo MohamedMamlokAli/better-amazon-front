@@ -28,11 +28,9 @@ export class CategorySliderComponent implements OnInit {
   constructor() {
     if (window.innerWidth >= 768) {
       this.slidesPerView = 3.5;
-      console.log(window.innerWidth);
     }
     if (window.innerWidth >= 1024) {
       this.slidesPerView = 4.5;
-      console.log(window.innerWidth);
     }
   }
 
@@ -44,11 +42,9 @@ export class CategorySliderComponent implements OnInit {
   ngOnChange() {
     if (window.innerWidth >= 768) {
       this.slidesPerView = 3.5;
-      console.log(window.innerWidth);
     }
     if (window.innerWidth >= 1024) {
       this.slidesPerView = 4.5;
-      console.log(window.innerWidth);
     }
   }
   onResize(event: any) {
@@ -64,6 +60,5 @@ export class CategorySliderComponent implements OnInit {
   }
   onSwipe(e: [Swiper]) {
     this.activeIndex = e[0].activeIndex;
-    console.log(this.activeIndex);
   }
 }

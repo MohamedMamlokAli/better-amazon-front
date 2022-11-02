@@ -15,9 +15,7 @@ export class CategoriesComponent implements OnInit {
     this.categories = this.CategoriesService.getCategories();
   }
 
-  ngOnInit(): void {
-    console.log(this.categories);
-  }
+  ngOnInit(): void {}
   hovered(id: number) {
     if (id == this.category) {
       return this.unHovered();

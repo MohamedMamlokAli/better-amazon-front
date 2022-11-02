@@ -1,9 +1,25 @@
 <app-header (toggle)="toggleMenu()"></app-header>
+
+<div
+  [ngClass]="{ hidden: !menuOpened }"
+  class="absolute z-20 h-screen lg:hidden w-20"
+>
+  <router-outlet name="sidemenu"></router-outlet>
+</div>
 <div id="page-wrapper" class="flex relative">
   <app-categories
+    *ngIf="currentRoute == 'home' || currentRoute == '/'; else elseBlock"
     [ngClass]="{ hidden: !menuOpened }"
     class="absolute z-20 h-screen lg:hidden w-20"
   ></app-categories>
+  <ng-template #elseBlock>
+    <h1
+      [ngClass]="{ hidden: !menuOpened }"
+      class="absolute z-20 h-screen lg:hidden w-20"
+    >
+      not the same menu
+    </h1>
+  </ng-template>
   <div class="w-full lg:w-[calc(100%-202px)]">
     <router-outlet></router-outlet>
   </div>
